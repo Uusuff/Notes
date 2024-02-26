@@ -1,4 +1,3 @@
-
 const textNewNode = document.getElementById('input_new_Node');
 const btnCreate = document.getElementById('create');
 const btnSuccess = document.getElementById('btn-success');
@@ -118,6 +117,13 @@ btnCreate.onclick = function () {
    render();
    textNewNode.value = '';
 }
+
+textNewNode.addEventListener('keypress', function (event) {
+   let key = event.keyCode;
+   if (key === 13) {
+      btnCreate.onclick();
+   }
+});
 
 render();
 
