@@ -36,7 +36,6 @@ function render() {
          addNote(createNote(listNotes[i].title, i, listNotes[i].state));
       }
    }
-
 }
 
 function chengeState(index) {
@@ -96,7 +95,6 @@ listElements.onclick = function (event) {
       chengeState(indexElm);
       render();
    }
-
 }
 
 function addAlternativeText() {
