@@ -1,0 +1,40 @@
+.container{
+   width: 800px;
+}
+.new-node{
+   width: 100%;
+   height: 40px;
+   border-radius: 8px;
+}
+.btn-create{
+   width: 100%;
+   height: 40px;
+   margin: 10px 0 0 0;
+   border: 2px solid rgb(12, 187, 236);
+   border-radius: 8px;
+   color: rgb(12, 187, 236);
+   background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+.btn-create:hover{
+   opacity: 0.7;
+}
+.list-items{
+   margin: 10px 0 0 0;
+   padding: 5px 10px;
+   background-color: aliceblue;
+   color: black;
+}
+.item{
+   width: 100%;
+   margin: 10px 0 0 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.done{
+   text-decoration: line-through;
+}
+.item-text{
+   font-weight: 640;
+   margin-bottom: 5px;
+}
