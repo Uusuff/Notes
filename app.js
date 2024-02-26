@@ -31,8 +31,7 @@ function render(arr) {
       for(let i = 0; i < arr.length; i++){
          addNote(createNote(arr[i].title, i, arr[i].state));
       }
-   }
-   
+   }  
 }
 
 function chengeState(index){
@@ -89,8 +88,7 @@ listElements.onclick = function(event){
    } else if(typeElm == "toggle"){
       chengeState(indexElm);
       render(listNotes);
-   }
-   
+   }  
 }
 
 function addAlternativeText(){
@@ -109,5 +107,12 @@ btnCreate.onclick = function () {
    render(listNotes)
    textNewNode.value ='';
 }
+
+textNewNode.addEventListener('keypress', function (event) {
+   let key = event.keyCode;
+   if (key === 13) {
+      btnCreate.onclick();
+   }
+});
 
 render(listNotes);
