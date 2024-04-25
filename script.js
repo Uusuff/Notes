@@ -8,8 +8,13 @@ const locStorage = window.localStorage;
 
 function getDataLocStor() {
    let getArray = locStorage.getItem('arr');
-   let parseArr = JSON.parse(getArray);
-   return parseArr;
+   console.log(getArray)
+   if (getArray == undefined){
+      return undefined;
+   } else {
+      let parseArr = JSON.parse(getArray);
+      return parseArr;
+   }
 }
 
 function setDataLocStor(data) {
@@ -29,7 +34,8 @@ function deleteElement(index) {
 function render() {
    clearingList();
    let listNotes = getDataLocStor();
-   if (listNotes.length == 0) {
+   if (listNotes == undefined || listNotes.length == 0) {
+      setDataLocStor([])
       addAlternativeText();
    } else {
       for (let i = 0; i < listNotes.length; i++) {
